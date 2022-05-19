@@ -1,4 +1,4 @@
-Fade Out
+
 <div class=": h-16 w-16 bg-blue-600 transition-opacity duration-700 ease-in opacity-100 hover:opacity-0"></div>
 
 <div x-data="{open: false, type: '', message: ''}"
