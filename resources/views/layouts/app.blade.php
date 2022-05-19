@@ -40,8 +40,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.js"></script>
 
-    <!-- file input js -->
-    <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    </style>
 
     @livewireStyles
 
@@ -74,7 +86,8 @@
     </div>
 
     <!-- <x-alert.popup class="top-14" /> -->
-    <x-alert.popup class="bottom-0" />
+    <x-alert.popup />
+    <!-- <x-alert.notification /> -->
 
     @livewireScripts
 

@@ -17,4 +17,10 @@ class TempTitle extends Model
         'link',
         'featured_image_link'
     ];
+
+    const SUCCESS = "success";
+    const INFO = "info";
+    const WARNING = "warning";
+    const DANGER = "danger";
+    const UNKNOWN = "unknown";
 }

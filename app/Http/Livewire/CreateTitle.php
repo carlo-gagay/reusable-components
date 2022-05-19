@@ -33,35 +33,38 @@ class CreateTitle extends Component
 
     public function save()
     {
-        $this->validate();
+        // $this->validate();
 
-        try {
+        // try {
 
-            $img = $this->featured_image->store('images');
+        //     $img = $this->featured_image->store('images');
 
-            TempTitle::create([
-                'title' => $this->title,
-                'short_description' => Str::limit($this->description, 20),
-                'description' => $this->description,
-                'link' => $this->link,
-                'featured_image_link' => $img,
-                'user_id' => Auth::user()->id
-            ]);
+        //     TempTitle::create([
+        //         'title' => $this->title,
+        //         'short_description' => Str::limit($this->description, 20),
+        //         'description' => $this->description,
+        //         'link' => $this->link,
+        //         'featured_image_link' => $img,
+        //         'user_id' => Auth::user()->id
+        //     ]);
 
-            $this->dispatchBrowserEvent('refreshParent');
+        //     $this->emit('refreshParent');
 
             $this->dispatchBrowserEvent('notify', [
-                'type' => 'success',
+                'status' => TempTitle::DANGER,
                 'message' => 'New title has been saved successfully!'
             ]);
 
-            $this->showModal = false;
-        } catch (\Exception $ex) {
-            $this->dispatchBrowserEvent('notify', [
-                'type' => 'error',
-                'message' => $ex->getMessage()
-            ]);
-        }
+        //     $this->showModal = false;
+        // } catch (\Exception $ex) {
+        //     $this->dispatchBrowserEvent('notify', [
+        //         'type' => TempTitle::DANGER,
+        //         'message' => $ex->get
+        //     ]);
+        // }
+        
+
+        // $this->reset();
     }
 
     public function render()
