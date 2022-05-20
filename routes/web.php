@@ -25,4 +25,8 @@ Route::get('/dashboard', Dashboard::class)->name('dashboard')->middleware('auth'
 
 Route::get('/titles', Titles::class)->name('titles')->middleware('auth');
 
+Route::get('/edit-page-audio', function(){
+    return view('edit-page-audio');
+});
+
 require __DIR__.'/auth.php';
