@@ -3,7 +3,8 @@
         remove(message) {
             this.messages = this.messages.filter(m => {return m.id != message.id});
         },
-    }" @notify.window="let newMsg = {id:Date.now(), status: $event.detail.status, message: $event.detail.message}; messages.push(newMsg); setTimeout(() => {remove(newMsg)}, 6000);" class="z-[100000] fixed inset-0 md:flex flex flex-col items-end md:items-center md:justify-end px-4 py-6 pointer-events-none sm:p-6 space-y-4">
+    }" 
+    @notify.window="let newMsg = {id:Date.now(), status: $event.detail.status, message: $event.detail.message}; messages.push(newMsg); setTimeout(() => {remove(newMsg)}, 6000);" class="z-[100000] fixed inset-0 md:flex flex flex-col items-end md:items-center md:justify-end px-4 py-6 pointer-events-none sm:p-6 space-y-4">
     <template x-for="(message, messageIndex) in messages" :key="messageIndex" hidden>
         <div x-transition:enter="transform ease-out duration-300 transition" x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2" x-transition:enter-end="translate-y-0 opacity-100 sm:translate-x-0" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto">
             <div :class="{

@@ -48,14 +48,13 @@ class CreateTitle extends Component
         //         'user_id' => Auth::user()->id
         //     ]);
 
-        //     $this->emit('refreshParent');
+            $this->emit('refreshParent');
 
             $this->dispatchBrowserEvent('notify', [
-                'status' => TempTitle::DANGER,
+                'status' => TempTitle::SUCCESS,
                 'message' => 'New title has been saved successfully!'
             ]);
 
-        //     $this->showModal = false;
         // } catch (\Exception $ex) {
         //     $this->dispatchBrowserEvent('notify', [
         //         'type' => TempTitle::DANGER,
@@ -63,8 +62,7 @@ class CreateTitle extends Component
         //     ]);
         // }
         
-
-        // $this->reset();
+        // $this->showModal = false;
     }
 
     public function render()

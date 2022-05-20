@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\EditTitle;
 use App\Http\Livewire\Titles;
 use App\Models\TempTitle;
 use Illuminate\Support\Facades\Route;
