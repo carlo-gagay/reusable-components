@@ -13,14 +13,14 @@
 
 <body>
     <div class="w-full h-full py-8 md:py-8">
-        <div class="m-auto w-11/12 md:w-8/12 md:py-4 md:px-8 py-2 px-4 border space-y-3">
+        <div class="min-w-min m-auto w-11/12 md:w-8/12 md:py-4 md:px-8 py-2 px-4 border space-y-3">
 
             <!-- header div -->
-            <div class="flex items-center justify-between">
+            <div class="inline-block sm:flex sm:items-center justify-between">
 
 
                 <!-- header component -->
-                <div class="flex items-center">
+                <div class="w-full sm:w-auto flex items-center">
                     <h2 class="text-xl font-bold text-slate-800">Add Page: Audio</h2>
                 </div>
 
@@ -30,7 +30,7 @@
                     <button class="border border-gray-300 bg-gray-100 py-2 px-5 text-slate-500 hover:bg-gray-200">Cancel</button>
                 </div>
 
-            </div>
+            </div> 
             <!-- end header div -->
 
             <!-- divider -->
@@ -46,11 +46,11 @@
                 </div>
 
                 <!-- create 2 columns -->
-                <div class="inline-block align-top md:grid md:grid-cols-2 gap-4 space-y-4 md:space-y-0">
+                <div class="inline-block align-top w-full lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0">
 
                     <!-- Comic image -->
-                    <div class="border">
-                        <img src="https://64.media.tumblr.com/a533502945edec63822989b77b319896/6500dfb2f7f4dfd2-2c/s500x750/73224cf7de0a0a64ef9ac18e8d58e317f7cf59a9.png" alt="Image">
+                    <div class="border w-full">
+                        <img class="w-full h-full" src="https://64.media.tumblr.com/a533502945edec63822989b77b319896/6500dfb2f7f4dfd2-2c/s500x750/73224cf7de0a0a64ef9ac18e8d58e317f7cf59a9.png" alt="Image">
                     </div>
 
                     <!-- placeholder for comic image controls -->
